@@ -1,0 +1,24 @@
+1. 새프로젝트 생성
+  - File > New > Dynamic Web Project
+  - Project name: "JSPTest"
+  - next > next > finish
+
+2. 테스트용
+  - WebContent > hello.html
+  - JSPTest > Java Resources > src > "com.test.jsp" 패키지 생성 > "Hello.java" 생성
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
