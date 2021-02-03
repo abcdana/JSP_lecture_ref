@@ -37,6 +37,10 @@
 		display: inline;
 	}
 	
+	input[type=radio]+span {
+		margin-right: 15px;
+	}
+
 </style>
 </head>
 <body>
@@ -63,11 +67,11 @@
 				</tr>
 				<tr>
 					<th>배경색</th>
-					<td><input type="color" name="backgroundcolor" value="#FFF" class="form-control sm"></td>
+					<td><input type="color" name="backgroundcolor" value="#FFFFFF" class="form-control sm"></td>
 				</tr>
 				<tr>
 					<th>글자색</th>
-					<td><input type="color" name="color" value="#FFF" class="form-control sm"></td>
+					<td><input type="color" name="color" value="#000000" class="form-control sm"></td>
 				</tr>
 				<tr>
 					<th>글자 크기</th>
@@ -78,12 +82,17 @@
 					<td><input type="number" name="count" min="1" max="30" value="1" class="form-control sm right"></td>
 				</tr>
 				<tr>
-					<th></th>
-					<td></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td></td>
+					<th>아이콘</th>
+					<td>
+					
+	<input type="radio" name="icon" value="none"> 없음
+	<input type="radio" name="icon" value="glyphicon glyphicon-heart"> <span class="glyphicon glyphicon-heart"></span>
+	<input type="radio" name="icon" value="glyphicon glyphicon-star"> <span class="glyphicon glyphicon-star"></span>
+	<input type="radio" name="icon" value="glyphicon glyphicon-off"> <span class="glyphicon glyphicon-off"></span>
+	<input type="radio" name="icon" value="glyphicon glyphicon-time"> <span class="glyphicon glyphicon-time"></span>
+	<input type="radio" name="icon" value="glyphicon glyphicon-camera"> <span class="glyphicon glyphicon-camera"></span>
+					
+					</td>
 				</tr>			
 			</table>
 			
@@ -96,3 +105,24 @@
 	
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
