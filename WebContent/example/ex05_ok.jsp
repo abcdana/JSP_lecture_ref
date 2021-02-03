@@ -11,8 +11,8 @@
 	request.setCharacterEncoding("UTF-8");
 	
 	String num = request.getParameter("num"); //<input type="text" name="num">
-	
 	String txt = request.getParameter("txt");
+	String txt2 = request.getParameter("txt2");
 
 %>
 <!DOCTYPE html>
@@ -27,5 +27,31 @@
 	
 	<div>num: <%= num %></div>
 	<div>txt: <%= txt %></div>
+	<div>txt2: <%= txt2 %></div>
+	
+	<hr>
+	
+	<h2>링크 사용하기 + 데이터 전달</h2>
+	<a href="ex05_ok.jsp?num=123&txt=hong&txt2=java">ex05_ok.jsp 페이지로 이동하기</a>
+	
+	<hr>
+	
+	<h2>JavaScript 사용하기</h2>
+	
+	<button type="button" id="btn1">클릭하세요.</button>
+	
+	<script>
+	
+		document.getElementById("btn1").onclick = function() {
+			
+			//***절대 공백 문자 사용 금지
+			//url?key=value
+			//url?key=value&key=value
+			location.href = "ex05_ok.jsp?num=111&txt=버튼&txt2=클릭했습니다.";
+			
+		};
+	
+	</script>
+	
 </body>
 </html>
