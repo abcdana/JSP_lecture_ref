@@ -2,6 +2,14 @@
     pageEncoding="UTF-8"%>
 <% 
 
+	//session 객체가 하는 일
+	// -> 데이터 입출력
+	
+	//내장 객체 중 사용자 데이터를 입출력하는 기능을 가진 객체들...
+	pageContext.setAttribute("num1", 100);
+	request.setAttribute("num2", 200);
+	session.setAttribute("num3", 300);
+	application.setAttribute("num4", 400);
 
 %>
 <!DOCTYPE html>
@@ -15,39 +23,17 @@
 </style>
 </head>
 <body>
-	<!-- ex12_application.jsp -->
+	<!-- ex13_session.jsp -->
 	<div class="container">
-		<h1 class="page-header">application 객체</h1>
+		<h1 class="page-header"></h1>
 		
-		<h2>컨테이너 정보 - Servlet 컨테이너, JSP 컨테이너 -> 톰캣</h2>
+		<div>num1 : <%= pageContext.getAttribute("num1")%></div>
+		<div>num1 : <%= request.getAttribute("num2")%></div>
+		<div>num1 : <%= session.getAttribute("num3")%></div>
+		<div>num1 : <%= application.getAttribute("num4")%></div>
 		
-		<div><%= application.getServerInfo() %></div>
 		
-		<div><%= application.getContextPath() %></div>
-		<div><%= request.getContextPath() %></div>
-		
-		<div><%= application.getServletContextName() %></div>
-		
-		<!--
-			인자값(상대경로) -> 로컬 물리 경로 변환
-			
-			C:\class\server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JSP_lecture_ref\ex12_application.jsp
-			
-			아파치 톰캣
-			- (워크스페이스에 있는) 원본 소스를 직접 실행(사용)하지 않고, 항상 자신이 지정한 특정 폴더에 원본의 복사본을 만들어서 복사본을 실행(사용)한다.
-			- 대상 : *.html, *.css, *.js, *.java, *.jsp, 이미지 등등 모든 파일...
-		-->
-		<div><%= application.getRealPath("ex12_application.jsp") %></div>
-		
-
-		<hr>
-		
-		<!-- 서블릿과 JSP는 컨테이너 버전에 따라 달라진다. -->
-		<h2>서블릿 버전</h2>
-		<div><%= application.getMajorVersion() %>.<%= application.getMinorVersion() %></div>
-
-		<h2>JSP 버전</h2>
-		<div><%= JspFactory.getDefaultFactory().getEngineInfo().getSpecificationVersion() %></div>
+	
 	
 	</div>
 	
@@ -57,9 +43,6 @@
 	</script>
 </body>
 </html>
-
-
-
 
 
 
