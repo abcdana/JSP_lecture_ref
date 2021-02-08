@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'SDKukdetopokki-Lt';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, table, th, td, ul, ol, li, input, select, textarea, div, p, span, a, option, blockquote {
+   font-family: 'Y_Spotlight';
+}
+
+* {
+   outline: none !important;
+}
+
+.container {
+   width: 700px;
+}
+
+
+.container .header {
+	
+}
+
+.container .content {
+	
+}
+
+.container .footer {
+	margin-top: 20px;
+}
+
+.short {
+	width: 30%;
+}
+
+.medium {
+	width: 60%;
+}

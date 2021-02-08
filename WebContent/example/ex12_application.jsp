@@ -33,7 +33,7 @@
 		<div>num1 : <%= application.getAttribute("num4")%></div>
 		
 		
-		<!-- test -->
+		<!--  -->
 	
 	</div>
 	
