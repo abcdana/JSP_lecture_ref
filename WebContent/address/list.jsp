@@ -40,7 +40,8 @@
 	#tbl th:nth-child(3) { width: 60px; }
 	#tbl th:nth-child(4) { width: 60px; }
 	#tbl th:nth-child(5) { width: 130px; }
-	#tbl th:nth-child(6) { width: 290px; }
+	#tbl th:nth-child(6) { width: 170px; }
+	#tbl th:nth-child(7) { width: 120px; }
 	
 	#tbl td:nth-child(6) { text-align: left; }
 	
@@ -65,6 +66,7 @@
 					<th>성별</th>
 					<th>연락처</th>
 					<th>주소</th>
+					<th>조작</th>
 				</tr>
 				<%
 					while (rs.next()) {
@@ -88,6 +90,10 @@
 					</td>
 					<td><%= rs.getString("tel") %></td>
 					<td><%= rs.getString("address") %></td>
+					<td>
+						<input type="button" value="edit" class="btn btn-xs btn-default" onclick="edit(<%= rs.getString("seq") %>);">
+						<input type="button" value="delete" class="btn btn-xs btn-default" onclick="del(<%= rs.getString("seq") %>);">
+					</td>
 				</tr>
 				<%
 					}
@@ -106,8 +112,23 @@
 	</div>
 	
 	<script>
+	
+		function edit(seq) {
+			location.href = "/jsp/address/edit.jsp?seq=" + seq;	
+		}
 
+		//delete obj.prop; //프로퍼티 삭제 명령어
+		
+		function del(seq) {
+			location.href = "/jsp/address/del.jsp?seq=" + seq;	
+		}
+		
+		
+		
+
+		
 	</script>
+	
 </body>
 </html>
 
