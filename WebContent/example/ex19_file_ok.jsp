@@ -114,6 +114,15 @@
 		<div>
 			<a href="/jsp/example/files/<%= filename %>"><%= filename %></a>
 		</div>
+
+		<div>
+			<a href="download.jsp?filename=<%= filename %>&orgfilename=<%= orgfilename %>"><%= orgfilename %></a>
+		</div>
+		
+		<!-- 최신 브라우저 지원 : download 키워드를 쓰면 열지 않고 바로 다운로드 받게 만들어준다. -->
+		<div>
+			<a href="/jsp/example/files/<%= filename %>" download><%= filename %></a>			
+		</div>
 		
 	
 	</div>
