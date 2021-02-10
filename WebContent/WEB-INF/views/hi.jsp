@@ -15,10 +15,12 @@
 </style>
 </head>
 <body>
-	<!--  -->
+	<!-- hi.jsp -->
 	<div class="container">
-		<h1 class="page-header"></h1>
-		
+		<h1 class="page-header">Hi</h1>
+		<div>
+			결과: <%= request.getAttribute("cup") %>
+		</div>
 	
 	
 	</div>

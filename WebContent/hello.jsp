@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<% 
+<%
 
+	
 
-%>
+%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,17 +16,34 @@
 </style>
 </head>
 <body>
-	<!--  -->
+	<!-- hello.jsp > View(출력 업무) -->
 	<div class="container">
-		<h1 class="page-header"></h1>
+		<h1 class="page-header">Hello</h1>
+		<div>안녕하세요.</div>
+		<div>
+			결과: <%= request.getAttribute("cup") %>
+		</div>
 		
-	
-	
 	</div>
 	
 	<script>
-	
-	
+
 	</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
